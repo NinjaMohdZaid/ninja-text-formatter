@@ -42,7 +42,7 @@ function App() {
             {/* <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter Your text to analyze below" mode={mode}/>}>
             </Route>
           </Routes> */}
-          <TextForm showAlert={showAlert} heading="Enter Your text to analyze below" mode={mode}/>
+          <TextForm showAlert={showAlert} heading="Try Ninja text Formatter - Word Counter and Beautify Text" mode={mode}/>
         </div>
         {/* </Router> */}
       </>

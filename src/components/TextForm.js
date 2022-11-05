@@ -71,19 +71,19 @@ export default function TextForm(props) {
           <div className="mb-2">
               <textarea className="form-control" onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'gray':'white',color:props.mode==='dark'?'white':'black'}} value={text} id="myBox" rows="8"></textarea>
           </div>
-          <button className="btn btn-primary mx-2 my-1" onClick = {handleUpClick}>Convert to Uppercase</button>
-          <button className="btn btn-primary mx-2 my-1" onClick = {handleLowerClick}>Convert to Lowercase</button>
-          <button className="btn btn-primary mx-2 my-1" onClick = {handleClearClick}>Clear Text</button>
-          <button className="btn btn-primary mx-2 my-1" onClick = {handleCopyClick}>Copy To Clipboard</button>
-          <button className="btn btn-primary mx-2 my-1" onClick = {handleExtraSpacesClick}>Remove Extra Spaces</button>
-          <button className="btn btn-primary mx-2 my-1" onClick = {handleBeautify}>Beautiefy Sentance</button>
+          <button disabled={text.length === 0} className="btn btn-primary mx-2 my-1" onClick = {handleUpClick}>Convert to Uppercase</button>
+          <button disabled={text.length === 0} className="btn btn-primary mx-2 my-1" onClick = {handleLowerClick}>Convert to Lowercase</button>
+          <button disabled={text.length === 0} className="btn btn-primary mx-2 my-1" onClick = {handleClearClick}>Clear Text</button>
+          <button disabled={text.length === 0} className="btn btn-primary mx-2 my-1" onClick = {handleCopyClick}>Copy To Clipboard</button>
+          <button disabled={text.length === 0} className="btn btn-primary mx-2 my-1" onClick = {handleExtraSpacesClick}>Remove Extra Spaces</button>
+          <button disabled={text.length === 0} className="btn btn-primary mx-2 my-1" onClick = {handleBeautify}>Beautiefy Sentance</button>
       </div>
       <div className="container my-2" style={{color:props.mode==='dark'?'white':'black'}}>
           <h2>Your text summary</h2>
           <p>{wordsCount} words,{text.length} characters,{sentanceCount} sentances</p>
           <p>{0.008*wordsCount} Minutes Read</p>
           <h2>Preview</h2>
-          <p>{text.length > 0 ? text:"Enter somthing in the textbox to preview it here."}</p>
+          <p>{text.length > 0 ? text:"nothing to preview."}</p>
       </div>
     </>
   )
